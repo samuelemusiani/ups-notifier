@@ -24,11 +24,11 @@ def parse_infos(result):
 
 
 def get_ups_info(ups_name):
-    subprocess_command = f"upsc {ups_name}"
-    result = subprocess.run(subprocess_command, shell=True, check=True,
+    subprocess_command = ['upsc', ups_name]
+    result = subprocess.run(subprocess_command, check=True,
                             capture_output=True, text=True)
 
-    return parse_infos(result)
+    return parse_infos(result.stdout)
 
 
 def force_ipv4_socket():
