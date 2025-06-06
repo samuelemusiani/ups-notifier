@@ -1,0 +1,9 @@
+[Unit]
+Description=ups-notifier
+After=network.target
+
+[Service]
+ExecStart=/opt/ups-notifier/venv/bin/python -u /opt/ups-notifier/ups-notifier.py /opt/ups-notifier/config.toml
+
+[Install]
+WantedBy=multi-user.target
