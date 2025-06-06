@@ -1,0 +1,7 @@
+[telegram]
+chat_id=-1234921
+token="your_bot_token"
+
+[ups]
+name = "ups0"
+
